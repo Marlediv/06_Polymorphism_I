@@ -12,6 +12,10 @@ public class App {
         pollObj(worker);
         pollObj(drone);
 
+        // Sollte eigentlich nicht gehen! Instanzierung von Superklasse! //
+        HoneyBee bee = new HoneyBee();
+        pollObj(bee);
+
     }
 
     // Polymorphie !
