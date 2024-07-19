@@ -8,18 +8,20 @@ public class App {
         Worker worker = new Worker();
         Drone drone = new Drone();
 
-        output(queen.doYourJob());
-        output(queen.fly());
+        pollObj(queen);
+        pollObj(worker);
+        pollObj(drone);
 
-        output(worker.doYourJob());
-        output(worker.fly());
-
-        output(drone.doYourJob());
-        output(worker.fly());
-     
     }
 
-   
+    // Polymorphie !
+   private static void pollObj(HoneyBee obj){
+
+    output(obj.doYourJob());
+    output(obj.fly());
+    output("--------------------------------");
+
+   }
    
     private static void output(String outputStr) {
         System.out.println(outputStr);
